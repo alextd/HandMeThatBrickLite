@@ -24,5 +24,6 @@ Tweaks how Hand Me That Brick functionality is handled in RimWorld v1.0
 
 - [RimWorld Font](https://ludeon.com/forums/index.php?topic=11022.0) - [Marnador](https://ludeon.com/forums/index.php?action=profile;u=36313)
 - [Harmony Patch Library](https://github.com/pardeike/Harmony) - [pardeike](https://www.patreon.com/pardeike/overview)
+- [ModSync RW](https://github.com/KiameV/rimworld-modsync-rw) - [KiameV](https://github.com/KiameV)
 - Original mod concept - [gatherer818](https://steamcommunity.com/id/gatherer818)
 - Translations - [vEd_](https://github.com/vednic), [duduluu](https://github.com/duduluu), [Proxyer](https://github.com/Proxyer)
