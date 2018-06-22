@@ -11,7 +11,7 @@ Tweaks how Hand Me That Brick functionality is handled in RimWorld v1.0
   - Modded	- first haul to construction, then haul to storage.
 
 - Adds a toggle for Hand Me That Brick behaviour built into the Work tab. Compatible with popualr mods such as [Fluffy's WorkTab](https://github.com/FluffierThanThou/WorkTab).
-  - [Here's how it looks in vanilla]((https://i.imgur.com/8Ooq2ya.jpg))
+  - [Here's how it looks in vanilla](https://i.imgur.com/8Ooq2ya.jpg)
   - [Here's how it looks with Fluffy's mod](https://i.imgur.com/kScn6We.jpg)
 
 - Fixes a bug where pawns will "haul resources" to buildings that do not have a resource requirement (such as simple graves).
