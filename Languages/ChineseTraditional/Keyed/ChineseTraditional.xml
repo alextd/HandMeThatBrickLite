@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<HMTB.ToggleHaulToConstruction>在建造中使用搬運工</HMTB.ToggleHaulToConstruction>
+
+	<HMTB.ToggleHaulToConstruction.Tooltip>任何設置為搬運公的殖民者都會為建造工作運送材料。</HMTB.ToggleHaulToConstruction.Tooltip>
+
+</LanguageData>
