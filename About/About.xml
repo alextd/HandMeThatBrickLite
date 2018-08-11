@@ -3,7 +3,7 @@
 	<name>Hand Me That Brick Lite</name>
 	<author>Dingo</author>
 	<url>https://ludeon.com/forums/index.php?topic=26077</url>
-	<targetVersion>1.0.0</targetVersion>
+	<targetVersion>0.19.0</targetVersion>
 	<description>Tweaks how Hand Me That Brick functionality is handled in RimWorld v1.0*
 
 - Haulers will haul to constructions frames and blueprints at a higher priority:

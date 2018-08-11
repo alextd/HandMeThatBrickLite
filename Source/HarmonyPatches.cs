@@ -17,8 +17,8 @@ namespace HMTBLite
 		static HarmonyPatches()
 		{
 			// Ensure maximum compatibility with mods by patching the current Work tab's class
-			Type WorkTabWindowClass = DefDatabase<MainButtonDef>.GetNamed("Work").tabWindowClass;
-			MethodInfo workTabWindowContents = AccessTools.Method(WorkTabWindowClass, "DoWindowContents");
+			Type workTabWindowClass = DefDatabase<MainButtonDef>.GetNamed("Work").tabWindowClass;
+			MethodInfo workTabWindowContents = AccessTools.Method(workTabWindowClass, "DoWindowContents");
 
 			// Make the toggle more compatible with Fluffy's mod by moving it to the top of the WorkTab window
 			if (LoadedModManager.RunningModsListForReading.Any(m => m.Name == "Work Tab"))
@@ -44,7 +44,7 @@ namespace HMTBLite
 #endif
 		}
 
-		//Add a Hand Me That Brick toggle to the currently used Work Tab
+		// Add a Hand Me That Brick toggle to the currently used Work Tab
 		public static void Patch_MainTabWindow_Work()
 		{
 			string text = "HMTB.ToggleHaulToConstruction".Translate();
