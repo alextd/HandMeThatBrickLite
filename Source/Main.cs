@@ -6,7 +6,7 @@ namespace HMTBLite
 	{
 		public Main(ModContentPack content) : base(content)
 		{
-			GetSettings<Settings>();
+			this.GetSettings<Settings>();
 		}
 	}
 }
