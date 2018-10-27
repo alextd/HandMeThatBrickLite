@@ -25,7 +25,7 @@ namespace HMTBLite
 			MethodInfo deliverToBlueprintsJob = AccessTools.Method(typeof(WorkGiver_ConstructDeliverResourcesToBlueprints), nameof(WorkGiver_ConstructDeliverResourcesToBlueprints.JobOnThing));
 
 			// Compatibility with Fluffy's WorkTab mod
-			if (workTabWindowClass == typeof(WorkTab.MainTabWindow_WorkTab))
+			if (workTabWindowClass.FullName.ToString() == "WorkTab.MainTabWindow_WorkTab")
 			{
 #if DEBUG
 				Log.Message("HMTB Lite :: Modifying toggle Rect for Fluffy's WorkTab");
