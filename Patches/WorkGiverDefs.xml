@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+	<!-- Original defs found in Core/Defs/WorkGiverDefs/WorkGivers.xml -->
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/WorkGiverDef[defName = "DeliverResourcesToFrames"]/priorityInType</xpath>
 		<value>
@@ -9,23 +11,9 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/WorkGiverDef[defName = "DeliverResourcesToFrames"]/giverClass</xpath>
-		<value>
-			<giverClass>HMTBLite.WorkGiver_DeliverResourcesToFrames</giverClass>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/WorkGiverDef[defName = "DeliverResourcesToBlueprints"]/priorityInType</xpath>
 		<value>
 			<priorityInType>16</priorityInType>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/WorkGiverDef[defName = "DeliverResourcesToBlueprints"]/giverClass</xpath>
-		<value>
-			<giverClass>HMTBLite.WorkGiver_DeliverResourcesToBlueprints</giverClass>
 		</value>
 	</Operation>
 
