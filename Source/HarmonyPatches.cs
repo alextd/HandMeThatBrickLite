@@ -21,8 +21,6 @@ namespace HMTBLite
 			MethodInfo workTabDoWindowContents = AccessTools.Method(workTabWindowClass, "DoWindowContents");
 			MethodInfo deliverToFramesShouldSkip = AccessTools.Method(typeof(WorkGiver_ConstructDeliverResourcesToFrames), nameof(WorkGiver_ConstructDeliverResourcesToFrames.ShouldSkip));
 			MethodInfo deliverToBlueprintsShouldSkip = AccessTools.Method(typeof(WorkGiver_ConstructDeliverResourcesToBlueprints), nameof(WorkGiver_ConstructDeliverResourcesToBlueprints.ShouldSkip));
-			MethodInfo deliverToFramesJob = AccessTools.Method(typeof(WorkGiver_ConstructDeliverResourcesToFrames), nameof(WorkGiver_ConstructDeliverResourcesToFrames.JobOnThing));
-			MethodInfo deliverToBlueprintsJob = AccessTools.Method(typeof(WorkGiver_ConstructDeliverResourcesToBlueprints), nameof(WorkGiver_ConstructDeliverResourcesToBlueprints.JobOnThing));
 
 			// Compatibility with Fluffy's WorkTab mod
 			if (workTabWindowClass.FullName.ToString() == "WorkTab.MainTabWindow_WorkTab")
@@ -44,8 +42,6 @@ namespace HMTBLite
 			harmony.Patch(workTabDoWindowContents, null, new HarmonyMethod(typeof(HarmonyPatches), nameof(HarmonyPatches.Patch_Postfix_MainTabWindow_Work)), null);
 			harmony.Patch(deliverToFramesShouldSkip, new HarmonyMethod(typeof(HarmonyPatches), nameof(HarmonyPatches.Patch_Prefix_WorkGivers_ShouldSkip)), null, null);
 			harmony.Patch(deliverToBlueprintsShouldSkip, new HarmonyMethod(typeof(HarmonyPatches), nameof(HarmonyPatches.Patch_Prefix_WorkGivers_ShouldSkip)), null, null);
-			harmony.Patch(deliverToFramesJob, null, new HarmonyMethod(typeof(HarmonyPatches), nameof(HarmonyPatches.Patch_Postfix_WorkGivers_Job)), null);
-			harmony.Patch(deliverToBlueprintsJob, null, new HarmonyMethod(typeof(HarmonyPatches), nameof(HarmonyPatches.Patch_Postfix_WorkGivers_Job)), null);
 
 #if DEBUG
 			Log.Message("HMTB Lite :: Injected Harmony patches");
@@ -76,23 +72,6 @@ namespace HMTBLite
 			}
 
 			return true;
-		}
-
-		// Fix haulers "delivering" to 0-material buildings such as graves
-		public static void Patch_Postfix_WorkGivers_Job(WorkGiver_ConstructDeliverResources __instance, Thing t, ref Job __result)
-		{
-			if (__instance.def.workType == WorkTypeDefOf.Hauling && __result != null)
-			{
-				if (t is Frame frame && frame.MaterialsNeeded().NullOrEmpty())
-				{
-					__result = null;
-				}
-
-				else if (t is Blueprint_Build blueprint && blueprint.MaterialsNeeded().NullOrEmpty())
-				{
-					__result = null;
-				}
-			}
 		}
 	}
 }
