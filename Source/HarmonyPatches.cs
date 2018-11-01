@@ -88,7 +88,7 @@ namespace HMTBLite
 					__result = null;
 				}
 
-				else if (t is Blueprint blueprint && blueprint.MaterialsNeeded().NullOrEmpty())
+				else if (t is Blueprint_Build blueprint && blueprint.MaterialsNeeded().NullOrEmpty())
 				{
 					__result = null;
 				}
